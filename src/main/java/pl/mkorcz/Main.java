@@ -22,5 +22,15 @@ public class Main {
 
         int yourAge = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
         System.out.println("Your age is " + yourAge + "; that's a good time to start programming!");
+
+        System.out.println("Now I will prove to you that I can count to any number you want.");
+
+        int descNumber = scanner.nextInt();
+
+        for (int i = 0; i <= descNumber; i++) {
+            System.out.println(i + "!");
+        }
+        System.out.println("Completed, have a nice day!");
+
     }
 }

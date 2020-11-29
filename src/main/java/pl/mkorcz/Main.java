@@ -3,16 +3,30 @@ package pl.mkorcz;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        greet();
+        remindName();
+        guessAge();
+        count();
+        test();
+        end();
+    }
+
+    private static void greet() {
         System.out.println("Hello! My name is Aid.");
         System.out.println("I was created in 2018.");
         System.out.println("Please, remind me your name.");
+    }
 
+    private static void remindName() {
         String yourName = scanner.nextLine();
-
         System.out.println("What a great name you have, " + yourName + "!");
+        System.out.println();
+    }
+
+    private static void guessAge() {
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
 
@@ -22,7 +36,10 @@ public class Main {
 
         int yourAge = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105;
         System.out.println("Your age is " + yourAge + "; that's a good time to start programming!");
+        System.out.println();
+    }
 
+    private static void count() {
         System.out.println("Now I will prove to you that I can count to any number you want.");
 
         int descNumber = scanner.nextInt();
@@ -30,7 +47,12 @@ public class Main {
         for (int i = 0; i <= descNumber; i++) {
             System.out.println(i + "!");
         }
+        System.out.println();
+    }
+
+    private static void test() {
         System.out.println("Let's test your programming knowledge.");
+        System.out.println();
         System.out.println("Why do we use methods?");
         System.out.println("1. To repeat a statement multiple times.");
         System.out.println("2. To decompose a program into several small subroutines.");
@@ -43,6 +65,9 @@ public class Main {
             answer = scanner.nextInt();
         }
 
+    }
+
+    private static void end() {
         System.out.println("Congratulations, have a nice day!");
     }
 }
